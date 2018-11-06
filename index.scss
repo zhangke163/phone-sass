@@ -1,0 +1,27 @@
+$dpr:2;
+@function px2rem($px){
+	$rem:36px;
+	@return (($px/$dpr) / $rem) +rem;
+}
+$color:blue;
+ul,li{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+.header{
+	width:px2rem(640px);
+	height:px2rem(80px);
+	background:$color;
+	margin:0 auto;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 1) and (-webkit-min-device-pixel-ratio: 1.3){
+	.header{
+	background:pink;
+	}
+}
+@media screen and (-webkit-min-device-pixel-ratio:2.5) and (-webkit-min-device-pixel-ratio:3){
+	.header{
+	background:orange;
+	}
+}
