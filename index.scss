@@ -4,6 +4,7 @@ $dpr:2;
 	@return (($px/$dpr) / $rem) +rem;
 }
 $color:blue;
+$fontSize:32px;
 ul,li{
 	margin:0;
 	padding:0;
@@ -14,6 +15,17 @@ ul,li{
 	height:px2rem(80px);
 	background:$color;
 	margin:0 auto;
+	.header-content{
+		width:px2rem(640px);
+		height:px2rem(80px);
+		display:-webkit-flex;
+		justify-content:space-around;
+		.header-item{
+			width:50px;
+			font-size:$fontSize;
+			line-height:px2rem(80px);
+		}
+	}
 }
 @media screen and (-webkit-min-device-pixel-ratio: 1) and (-webkit-min-device-pixel-ratio: 1.3){
 	.header{

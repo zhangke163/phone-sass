@@ -1,0 +1,10 @@
+% 淘宝px和rem的换算方法
+@function px2rem($px){
+	$device:720px;
+	@return (($px/$device))*10 +rem;
+}
+% 自己写的换算方法
+@function px2rem($px){
+	$rem:36px;
+	@return (($px/$dpr) / $rem) +rem;
+}
